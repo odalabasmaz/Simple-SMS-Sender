@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:windowSoftInputMode="adjustResize|stateHidden"
+    tools:context="com.antibyteapps.simplesmssender.MainActivity">
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/sms"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPhoneNumber"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:text="+90"
+        android:textColorHint="@color/abc_primary_text_material_dark"
+        android:layout_below="@id/imageButton"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCount"
+        android:text="1"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/txtPhoneNumber"
+        android:layout_alignLeft="@+id/txtPhoneNumber"
+        android:layout_alignStart="@+id/txtPhoneNumber"
+        android:textColorHint="@color/abc_primary_text_material_dark"
+        android:hint="number of messages"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMessage"
+        android:text="hi!"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:gravity="top|start"
+        android:layout_below="@+id/txtCount"
+        android:layout_alignLeft="@+id/txtCount"
+        android:layout_alignStart="@+id/txtCount"
+        android:textColorHint="@color/abc_primary_text_material_dark"
+        android:hint="Enter SMS"
+        android:minLines="5"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Sms"
+        android:id="@+id/btnSendSMS"
+        android:layout_below="@+id/txtMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/holo_orange_dark"
+        android:forceHasOverlappingRendering="true"/>
+
+</RelativeLayout>
